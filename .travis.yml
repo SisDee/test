@@ -12,7 +12,6 @@ jobs:
   include:
     - stage: Test coverage
       script:
-        - npm test -
+        - npm test 
       after_script:
-         - npm run codecov 
          - bash <(curl -s https://codecov.io/bash)
