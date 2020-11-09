@@ -14,4 +14,5 @@ jobs:
       script:
         - npm test -
       after_script:
-         - npm run codecov
+         - npm run codecov -t 08d14ab9-da21-4590-910e-c86c0da4b436
+         - bash <(curl -s https://codecov.io/bash)
