@@ -14,4 +14,4 @@ jobs:
       script:
         - npm test -
       after_script:
-         - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./node_modules/.bin/codecov
+         - npm run codecov
