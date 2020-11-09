@@ -1,4 +1,16 @@
 language: node_js
-node_js:
-  - 10.19.0
+node_js:    
+  - "12"
+addons:
+  chrome: stable
+env:
+  global:
+    CODECOV_TOKEN=$CODECOV_TOKEN    
+before_script:
+  - npm install 
+jobs:
+  include:
+    - stage: Test coverage
+      script:
+        - npm test 
 
